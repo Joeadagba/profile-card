@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>joe profile card</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+            setInterval(function(){
+                            setUTCTime()
+                    }, 1000);
+    
+                    function setUTCTime() {
+                        const time = utcTime = new Date().toISOString().slice(11,19);
+                        document.getElementById('time').innerHTML = time;
+                    }
+    </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="profile-card">
+                <img src="images/ci2.png " class="cover-image" data-testid="coverPicture" alt="cover-image">
+                <img src="images/Profile 150 x200px.jpeg" class="profile-image" data-testid="profilePicture" alt="profile-image">
+                <div class="text">
+                        <h1 style="background-image: linear-gradient(to right, #0098f0 0%, #564d4e 100%);
+                        color: transparent;
+                        -webkit-background-clip: text;" data-testid="fullName">Adagba Joseph</h1>
+                        <h3 style="text-align: center; margin-bottom: 20px; background: linear-gradient(#564d4e, #0098f0);"data-testid="jobTitle">Frontend Developer</h3>
+                    <p data-testid="shortBio">A passionate tech enthusiast transitioning from QA to Frontend Development. I am passionate about creating seamless user experiences, I, am currently running an internship with HNG to enhance my skills in JavaScript, React, Next.js, and Tailwind CSS, and also gain live experiences. I enjoy solving problems and continuously learning to improve my craft</p>
+                
+                    <div class="row">
+                        <div>
+                            <h2 data-testid="currentLocation">Current Location:</h2>
+                            <p>Lagos Nigeria</p>
+                        </div>
+                        <div>
+                            <h2>Email Address:</h2>
+                            <p data-testid="emailAddress">josephoadagba@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="time" onload="setUTCTime()">
+                    <div>
+                        <h2 data-testid="currentTimeUTC" style="margin-left: 20px;">UTC Time:</h2>
+                    <h1 id="time" data-testid="currentTimeUTC" style="margin-left: 20px ;"></h1>
+                </div>
+                    <div class="icons" data-testid="socialLinks">
+                        <a href="https://github.com/Joeadagba"><i class="fa fa-github" style="font-size: 30px;"></i></a>
+                        <a href="https://www.linkedin.com/feed/?trk=public_profile_not-found-log-in_google-one-tap-submit" class="fa fa-linkedin" style="font-size: 30px;"></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+            
+        </div> 
+        
+        
+    </body>
+</html>
